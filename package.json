@@ -1,0 +1,27 @@
+{
+  "name": "loterias-caixa-json",
+  "version": "1.0.0",
+  "description": "Módulo feito em node.js para obter o resultado das loterias da caixa e devolver um JSON com todos os dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennnisk/loterias-caixa-json.git"
+  },
+  "keywords": [
+    "loterias",
+    "caixa",
+    "json",
+    "download",
+    "parser",
+    "scrab"
+  ],
+  "author": "Dennnis.k <dennnis.projects@gmail.com> (https://github.com/dennnisk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dennnisk/loterias-caixa-json/issues"
+  },
+  "homepage": "https://github.com/dennnisk/loterias-caixa-json#readme"
+}
