@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/dennnisk/loterias-caixa-json/issues"
   },
-  "homepage": "https://github.com/dennnisk/loterias-caixa-json#readme"
+  "homepage": "https://github.com/dennnisk/loterias-caixa-json#readme",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "cheerio": "^1.0.0-rc.2",
+    "path": "^0.12.7",
+    "request": "^2.81.0"
+  }
 }

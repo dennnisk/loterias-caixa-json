@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Test files
+example/temp/*
+!example/temp/.gitkeep
+
