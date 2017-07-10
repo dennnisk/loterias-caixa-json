@@ -1,7 +1,10 @@
 var loteriasCaixaJson = require('./../index');
+var path = require('path');
+
+let diretorioTemporario = path.join('example', 'temp');
 
 // Mega sena
-loteriasCaixaJson.megaSena('./temp/')
+loteriasCaixaJson.megaSena(diretorioTemporario)
   .then((json) => {
     // Retorno de todos os jogos da mega sena em formato json
     console.debug('--------- [ MEGA SENA ] ---------');
@@ -11,7 +14,7 @@ loteriasCaixaJson.megaSena('./temp/')
   });
 
 // Loto Fácil
-loteriasCaixaJson.logoFacil('./temp/')
+loteriasCaixaJson.logoFacil(diretorioTemporario)
   .then((json) => {
     // Retorno de todos os jogos da mega sena em formato json
     console.debug('--------- [ LOTO FACIL ] ---------');
