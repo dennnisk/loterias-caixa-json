@@ -6,24 +6,22 @@ Módulo feito em node.js para obter o resultado das loterias da caixa e devolver
 You can see and example at the folder `example`
 
 ```javascript
-var loteriasCaixaJson = require('./../index');
+var loteriasCaixaJson = require('loterias-caixa-json');
 
 // Mega sena
 loteriasCaixaJson.megaSena('./temp/')
-  .then((json) => {
+  .then((jsonArray) => {
     // Retorno de todos os jogos da mega sena em formato json
-    console.debug('--------- [ MEGA SENA ] ---------');
-    console.debug(json);
+    console.debug(jsonArray);
   }).catch((err) => {
     console.error(err);
   });
 
 // Loto Fácil
-loteriasCaixaJson.logoFacil('./temp/')
-  .then((json) => {
+loteriasCaixaJson.lotoFacil('./temp/')
+  .then((jsonArray) => {
     // Retorno de todos os jogos da mega sena em formato json
-    console.debug('--------- [ LOTO FACIL ] ---------');
-    console.debug(json);
+    console.debug(jsonArray);
   }).catch((err) => {
     console.error(err);
   });

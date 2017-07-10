@@ -16,7 +16,7 @@ exports.megaSena = function(tempDirectory) {
 	});
 };
 
-exports.logoFacil = function(tempDirectory) {
+exports.lotoFacil = function(tempDirectory) {
 	let lotoFacil = require('./lib/loto-facil');
 
 	return lotoFacil.downloadResultadosLotoFacil(path.normalize(tempDirectory))
