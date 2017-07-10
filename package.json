@@ -1,6 +1,6 @@
 {
   "name": "loterias-caixa-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Módulo feito em node.js para obter o resultado das loterias da caixa e devolver um JSON com todos os dados",
   "main": "index.js",
   "scripts": {
