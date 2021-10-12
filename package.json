@@ -25,8 +25,10 @@
   },
   "homepage": "https://github.com/dennnisk/loterias-caixa-json#readme",
   "dependencies": {
-    "adm-zip": "^0.4.7",
-    "cheerio": "^1.0.0-rc.2",
+    "adm-zip": "^0.5.9",
+    "axios": "^0.23.0",
+    "cheerio": "^1.0.0-rc.10",
+    "follow-redirects": "^1.14.4",
     "path": "^0.12.7",
     "request": "^2.81.0"
   }
