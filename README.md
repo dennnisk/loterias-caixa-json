@@ -10,7 +10,7 @@ Alterado para utilizar o novo formato da caixa, para realizar os downloads e ger
 You can see and example at the folder `example`
 
 ```javascript
-var loteriasCaixaJson = require('./../index');
+var loteriasCaixaJson = require('loterias-caixa-json');
 
 // (...)
 
@@ -42,7 +42,7 @@ try {
 ### Mega-Sena
 ```json
 [
-	{
+  {
     "concurso": 1850,
     "local": "IPU, CE",
     "dataSorteio": "24/08/2016",
@@ -129,7 +129,7 @@ try {
     "arrecadacao_Total": 6258402,
     "ganhadores_Quina": 2,
     "cidades": [
-			{"Cidade": "CIANORTE","UF": "PR"},
+      {"Cidade": "CIANORTE","UF": "PR"},
       {"Cidade": "ITATIBA","UF": "SP"}
     ],
     "rateio_Quina": 903760.93,
@@ -197,4 +197,4 @@ try {
     "estimativa_Premio": 1856680.07,
     "valor_Acumulado_Especial": null
   }
-	```
+```
