@@ -10,6 +10,13 @@
       "name": "Launch Program",
       "program": "${workspaceRoot}\\example\\example.js",
       "protocol": "inspector"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "teste 2",
+      "program": "${workspaceRoot}\\example\\teste2.js",
+      "protocol": "inspector"
     }
   ]
 }
