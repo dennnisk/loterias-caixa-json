@@ -1,23 +1,55 @@
-var path = require('path');
+const megaSena = require('./lib/mega-sena');
+const lotoFacil = require('./lib/loto-facil');
+const quina = require('./lib/quina');
+const lotomania = require('./lib/lotomania');
 
+exports.megaSena = async function(htmlResultados, saveHtmlToFile) {
 
+  if (!htmlResultados) {
+    htmlResultados = await megaSena.downloadResultadosMegaSena();
+    if (saveHtmlToFile)
+      require('fs').writeFileSync(saveHtmlToFile, htmlResultados);
+    console.log('DONWNLOAD, concluido');
+  }
 
-exports.megaSena = function(tempDirectory) {
-  let megaSena = require('./lib/mega-sena');
-
-  return megaSena.downloadResultadosMegaSena(path.normalize(tempDirectory))
-    .then(function(nomeArquivoComResultados) {
-      return megaSena.htmlToJson(nomeArquivoComResultados);
-    });
+  return await megaSena.htmlToJson(htmlResultados);
 };
 
 
 
-exports.lotoFacil = function(tempDirectory) {
-  let lotoFacil = require('./lib/loto-facil');
+exports.lotoFacil = async function(htmlResultados, saveHtmlToFile) {
+  if (!htmlResultados) {
+    htmlResultados = await lotoFacil.downloadResultadosLotoFacil();
+    require('fs').writeFileSync(saveHtmlToFile, htmlResultados);
+    console.log('DONWNLOAD, concluido');
+  }
 
-  return lotoFacil.downloadResultadosLotoFacil(path.normalize(tempDirectory))
-    .then(function(nomeArquivoComResultados) {
-      return lotoFacil.htmlToJson(nomeArquivoComResultados);
-    });
+  return await lotoFacil.htmlToJson(htmlResultados);
+};
+
+
+
+exports.quina = async function(htmlResultados, saveHtmlToFile) {
+  if (!htmlResultados) {
+    htmlResultados = await quina.downloadResultadosQuina();
+    require('fs').writeFileSync(saveHtmlToFile, htmlResultados);
+    console.log('DONWNLOAD, concluido');
+  }
+
+  return await quina.htmlToJson(htmlResultados);
+};
+
+
+
+exports.lotomania = async function(htmlResultados, saveHtmlToFile) {
+  if (!htmlResultados) {
+    htmlResultados = await lotomania.downloadResultadosLotomania();
+    
+    if (saveHtmlToFile) {
+      require('fs').writeFileSync(saveHtmlToFile, htmlResultados);
+    }
+    console.log('DONWNLOAD, concluido');
+  }
+
+  return await lotomania.htmlToJson(htmlResultados);
 };
