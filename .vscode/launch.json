@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch Example",
       "program": "${workspaceRoot}\\example\\example.js",
       "protocol": "inspector"
     },

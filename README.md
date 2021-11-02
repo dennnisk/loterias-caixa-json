@@ -31,6 +31,22 @@ try {
 	let lotomania = await loteriasCaixaJson.lotomania()
 	console.debug(lotomania);
 
+	// Realizada o download e retorna o JSON com os resultados da Timemania
+	let timemania = await loteriasCaixaJson.timemania()
+	console.debug(timemania);
+
+	// Realizada o download e retorna o JSON com os resultados da Supla Sena
+	let duplaSena = await loteriasCaixaJson.duplaSena()
+	console.debug(duplaSena);
+
+	// Realizada o download e retorna o JSON com os resultados da Loteca
+	let loteca = await loteriasCaixaJson.loteca()
+	console.debug(loteca);
+
+	// Realizada o download e retorna o JSON com os resultados da Dia de Sorte
+	let diaDeSorte = await loteriasCaixaJson.diaDeSorte()
+	console.debug(diaDeSorte);
+
 } catch (error) {
 	console.error(error);
 }
@@ -198,3 +214,197 @@ try {
     "valor_Acumulado_Especial": null
   }
 ```
+
+### Timemania
+
+*Importante: o site da Caixa, no momento do desenvolvimento, não estava disponibilizando as Bolas Corretamente, por isso os campos "bolaX" não possuem as dezenas no exemplo, mas está desenvolvido para extrair os dados.*
+
+```json
+{
+    "concurso": 373,
+    "data_Sorteio": "05/12/2012",
+    "bola1": "dezena1",
+    "bola2": "dezena2",
+    "bola3": "dezena3",
+    "bola4": "dezena4",
+    "bola5": "dezena5",
+    "bola6": "dezena6",
+    "bola7": "dezena7",
+    "time_Coracao": "PONTE PRETA/SP",
+    "valor_Arrecadado": "3.307.986,00",
+    "ganhadores_7_Numeros": 1,
+    "cidade": [
+      {
+        "Cidade": "SÃO PAULO",
+        "UF": "SP"
+      }
+    ],
+    "ganhadores_6_Numeros": 11,
+    "ganhadores_5_Numeros": 370,
+    "ganhadores_4_Numeros": 6403,
+    "ganhadores_3_Numeros": 58233,
+    "ganhadores_Time_Coracao": 14671,
+    "valor_Rateio_7_Numeros": 8021889.1,
+    "valor_Rateio_6_Numeros": 16461.9,
+    "valor_Rateio_5_Numeros": 699.15,
+    "valor_Rateio_4_Numeros": 6,
+    "valor_Rateio_3_Numeros": 2,
+    "valor_Time_Coracao": 5,
+    "valor_Acumulado": 0,
+    "estimativa_Premio": 150000,
+    "bolas": [
+      "dezena1",
+      "dezena2",
+      "dezena3",
+      "dezena4",
+      "dezena5",
+      "dezena6",
+      "dezena7"
+    ]
+  }
+```  
+
+### Dupla Sena
+
+```json
+{
+    "concurso": 2212,
+    "data_Sorteio": "17/04/2021",
+    "numero_1_Sorteio1": 14,
+    "numero_2_Sorteio1": 31,
+    "numero_3_Sorteio1": 33,
+    "numero_4_Sorteio1": 42,
+    "numero_5_Sorteio1": 47,
+    "numero_6_Sorteio1": 50,
+    "sorteio1": [14,31,33,42,47,50],
+    "arrecadacao_Total": 95241005,
+    "ganhadores_Sena_Sorteio1": 4,
+    "cidade": [
+      {"Cidade": "BARBACENA","UF": "MG"},
+      {"Cidade": "CAMPO GRANDE","UF": "MS"},
+      {"Cidade": "BELEM","UF": "PA"},
+      {"Cidade": "RIO DE JANEIRO","UF": "RJ"},
+      {"Cidade": "BAURU","UF": "SP"},
+      {"Cidade": "GUARULHOS","UF": "SP"},
+      {"Cidade": "SAO PAULO","UF": "SP"}
+    ],
+    "rateio_Sena_Sorteio1": "NAO",
+    "acumulado_Sena_Sorteio1": false,
+    "valor_Acumulado_Sena_Sorteio1": 722,
+    "ganhadores_Quina_Sorteio1": 4002,
+    "rateio_Quina_Sorteio1": 38620,
+    "ganhadores_Quadra_Sorteio1": 85,
+    "rateio_Quadra_Sorteio1": 680930,
+    "ganhadores_Terno_Sorteio1": 2,
+    "rateio_Terno_Sorteio1": 6,
+    "numero_1_Sorteio2": 7,
+    "numero_2_Sorteio2": 11,
+    "numero_3_Sorteio2": 14,
+    "numero_4_Sorteio2": 27,
+    "numero_5_Sorteio2": 35,
+    "numero_6_Sorteio2": 3,
+    "sorteio2": [7,11,14,27,35,3],
+    "ganhadores_Sena_Sorteio2": 1059699,
+    "rateio_Sena_Sorteio2": 655,
+    "ganhadores_Quina_Sorteio2": 3971,
+    "rateio_Quina_Sorteio2": 37439,
+    "ganhadores_Quadra_Sorteio2": 88,
+    "rateio_Quadra_Sorteio2": 676364,
+    "ganhadores_Terno_Sorteio2": 2,
+    "rateio_Terno_Sorteio2": 150000,
+    "estimativa_Premio": 0,
+    "acumulado_Especial_de_Pascoa": false
+  }
+  ```
+
+
+
+### Loteca
+
+*Importante: o site da Caixa, no momento do desenvolvimento, não estava disponibilizando os Jogos Corretamente, por isso os campos "jogo_X" não possuem as dezenas corretamente, mas foi feito para funcionar quando o site da caixa for corrigido.*
+
+
+```json
+  {
+    "concurso": "591",
+    "data_Sorteio": "28/01/2014",
+    "ganhadores_14_Acertos": 3,
+    "cidade": [
+      {"Cidade": "SANTO ANTÔNIO DO MONTE","UF": "MG"},
+      {"Cidade": "AMAMBAÍ","UF": "MS"},
+      {"Cidade": "SÃO PAULO","UF": "SP"}
+    ],
+    "valor_Rateio_14_Acertos": 327587.94,
+    "acumulado": false,
+    "valor_Acumulado_14_Acertos": 0,
+    "ganhadores_13_Acertos": 54,
+    "valor_Rateio_13_Acertos": 1512.73,
+    "ganhadores_12_Acertos": 0,
+    "valor_Rateio_12_Acertos": 0,
+    "jogo_1": "coluna01",
+    "jogo_2": "coluna02",
+    "jogo_3": "coluna03",
+    "jogo_4": "coluna04",
+    "jogo_5": "coluna05",
+    "jogo_6": "coluna06",
+    "jogo_7": "coluna07",
+    "jogo_8": "coluna08",
+    "jogo_9": "coluna09",
+    "jogo_10": "coluna10",
+    "jogo_11": "coluna11",
+    "jogo_12": "coluna12",
+    "jogo_13": "coluna13",
+    "jogo_14": "coluna14",
+    "jogos": ["coluna01","coluna02","coluna03","coluna04","coluna05","coluna06","coluna07","coluna08","coluna09","coluna10","coluna11","coluna12","coluna13","coluna14"],
+    "arrecadacao_Total": 2032452.5,
+    "estimativa_Prêmio": 300000
+  }
+  ```
+
+
+### Dia de Sorte
+
+```json
+  {
+    "concurso": 25,
+    "local": "SÃO PAULO, SP",
+    "data_do_Sorteio": "17/07/2018",
+    "numero_1": 1,
+    "numero_2": 10,
+    "numero_3": 13,
+    "numero_4": 17,
+    "numero_5": 21,
+    "numero_6": 25,
+    "numero_7": 29,
+    "numeros": [1,10,13,17,21,25,29],
+    "mes_da_Sorte": 7,
+    "ganhadores_Faixa_1": 10,
+    "ganhadores_Faixa_2": 392,
+    "ganhadores_Faixa_3": 8017,
+    "ganhadores_Faixa_4": 75597,
+    "ganhadores_Faixa_5": 210521,
+    "rateio_Faixa_1": 66134.25,
+    "rateio_Faixa_2": 1032.91,
+    "rateio_Faixa_3": 20,
+    "rateio_Faixa_4": 4,
+    "rateio_Faixa_5": 2,
+    "cidade": [
+      { "Cidade": "SALVADOR", "UF": "BA" }, 
+      { "Cidade": "POTE", "UF": "MG" }, 
+      { "Cidade": "SANTA LUZIA", "UF": "MG" }, 
+      { "Cidade": "QUERÊNCIA", "UF": "MT" }, 
+      { "Cidade": "COLORADO", "UF": "PR" }, 
+      { "Cidade": "CAMPO DOS GOYTACAZES", "UF": "RJ" }, 
+      { "Cidade": "RIO DE JANEIRO", "UF": "RJ" }, 
+      { "Cidade": "BAURU", "UF": "SP" }, 
+      { "Cidade": "ITU", "UF": "SP" }, 
+      { "Cidade": "SÃO JOSÉ DO RIO PRETO", "UF": "SP" } 
+    ],
+    "valor_Arrecadado": 5152216,
+    "estimativa_proximo_concurso": 500000,
+    "valor_Acumulado_Proximo_Concurso": 0,
+    "acumulado": false,
+    "sorteio_Especial": true,
+    "observacao": ""
+  }
+  ```

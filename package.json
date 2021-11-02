@@ -1,6 +1,6 @@
 {
   "name": "loterias-caixa-json",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Módulo feito em node.js para obter o resultado das loterias da caixa e devolver um JSON com todos os dados",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,18 @@
     "json",
     "download",
     "parser",
-    "scrab"
+    "scrab",
+    "megasena",
+    "lotofacil",
+    "loto Fácil",
+    "Lotomania",
+    "Loto Mania",
+    "Dupla Sena",
+    "duplasena",
+    "Quina",
+    "duplasena",
+    "timemania",
+    "Time Mania"
   ],
   "author": "Dennnis.k <dennnis.projects@gmail.com> (https://github.com/dennnisk)",
   "license": "MIT",
